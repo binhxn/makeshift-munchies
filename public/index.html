@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Makeshift Munchies</title>
+	<script src="/js/main.js"></script>
+
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<h2 class="title">Makeshift Munchies</h2>
+
+	<div ng-controller="MainController as MainCtrl" class="container cf">
+
+	  <form ng-submit="searchRecipe()">
+
+	    <div class="ingredient-actions">
+	      <input class="ingredient" type="text" placeholder="Enter Ingredients" name="ingredient" ng-model="ingredient">
+	      <input class="submit-ingredients" type="submit" value="Search Recipes"/>
+	      <input class="clear-ingredients" ng-click="clearSearch()" type="button" value="Clear Ingredients" />
+	    </div>
+
+	    <div class="filter-options" ng-hide="filterOptions">
+	      <label class="label">Filters: </label>
+	      <input class="text-filter" placeholder="Filter By Name" type="text" name="textFilter" ng-model="textFilter">
+	      <input class="clear-ingredients" ng-click="clearFilter()" type="button" value="Clear Filter" />
+	      <select class="num-filter" ng-model="numLimit">
+	        <option value="4">4</option>
+	        <option value="8">8</option>
+	        <option value="12">12</option>
+	        <option value="20">20</option>
+	      </select>
+
+	      <h3 class='searched-ingredient'>{{filtered.length}} {{searchedIngredient}}</h3>
+	    </div>
+
+	  </form>
+
+	  <div class="recipe-container">
+	    <p class="error">{{error}}</p>
+
+	    <ul class="recipe-list">
+	      <li class="recipe" ng-repeat="recipe in filtered = (recipes | filter:textFilter | limitTo: numLimit)">
+	        <h4 class="recipe-title">{{recipe.title}}</h4>
+	        <img class="recipe-image" ng-src="{{recipe.image_url}}" />
+	        <p>Get Recipe!</p>
+	        <a class="recipe-link" href="{{recipe.source_url}}"></a>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+</body>
+</html>

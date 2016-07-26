@@ -1,0 +1,16 @@
+<div class="recipe-container">
+  <p class="error">{{error}}</p>
+
+  <!-- <div class="spinner" ng-show="loading">
+    <img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" width="20" height="20" />
+  </div> -->
+
+  <ul class="recipe-list">
+    <li class="recipe" ng-repeat="recipe in recipes | filter:textFilter | limitTo: numLimit">
+      <h4 class="recipe-title">{{recipe.title}}</h4>
+      <img class="recipe-image" ng-src="{{recipe.image_url}}" />
+      <p>Get Recipe!</p>
+      <a class="recipe-link" href="{{recipe.source_url}}"></a>
+    </li>
+  </ul>
+</div>

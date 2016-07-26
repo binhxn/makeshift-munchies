@@ -1,0 +1,12 @@
+<div class="filter-options" ng-hide="filterOptions">
+  <label class="label">Filters: </label>
+  <input class="text-filter" placeholder="Filter By Name" type="text" name="textFilter" ng-model="textFilter">
+  <select class="num-filter" ng-model="numLimit">
+    <option value="4">4</option>
+    <option value="8">8</option>
+    <option value="12">12</option>
+    <option value="20">20</option>
+  </select>
+
+  <h3 class='searched-ingredient'>{{searchedIngredient}}</h3>
+</div>

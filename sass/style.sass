@@ -1,0 +1,191 @@
+body
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  color: #5c6b80
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+
+h1, h2, h3, h4, h5, p, ul, li
+  margin: 0
+  padding: 0
+
+*, *:before, *:after
+  box-sizing: border-box
+
+ul
+  list-style-type: none
+
+.main-title
+  text-align: center
+  padding: 15px 0 30px
+
+.title,
+.ingredient-actions
+  text-align: center
+
+.title
+  color: #c27ba0
+  margin-bottom: 20px
+
+.ingredient,
+.text-filter
+  border: 1px solid #ccc
+  border-radius: 4px
+  font-size: 16px
+  letter-spacing: -1px
+  height: 30px
+  padding: 0 5px
+  vertical-align: bottom
+
+
+.ingredient-actions
+  margin-bottom: 10px
+
+
+.filter-options
+  text-align: center
+
+
+.label
+  font-size: 18px
+  vertical-align: middle
+
+
+.submit-ingredients,
+.clear-ingredients
+  background: #fff
+  border: 1px solid #ccc
+  border-radius: 4px
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+  font-size: 16px
+  height: 30px
+  outline: 0
+  transition: .2s all ease-in-out
+
+
+.toggle-filter
+  text-align: center
+  margin-bottom: 10px
+
+
+.num-filter
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+
+.searched-ingredient
+  margin-top: 10px
+
+
+.submit-ingredients:hover,
+.clear-ingredients:hover
+  background: #ccc
+  color: #fff
+  cursor: pointer
+
+
+.submit-ingredients:active,
+.clear-ingredients:active
+  border: 1px solid #aaa
+  background-color: #aaa
+  color: #fff
+
+
+.recipe-container
+  margin: 30px auto
+  max-width: 1000px
+
+
+.error
+  font-weight: bold
+  text-align: center
+
+
+.recipe-list
+  overflow: auto
+  padding: 10px 0
+
+
+.recipe-title
+  color: #c27ba0
+  margin-bottom: 20px
+  min-height: 40px
+
+
+.recipe
+  border: 1px solid #c27ba0
+  border-radius: 3px
+  float: left
+  margin-bottom: 30px
+  margin-right: 2%
+  padding: 10px 0
+  opacity: 1
+  position: relative
+  text-align: center
+  transition: .2s ease-in-out all
+  width: 23.5%
+
+
+.recipe:hover
+  -webkit-transform: translate(0, -10px)
+  -moz-transform: translate(0, -10px)
+  transform: translate(0, -10px)
+  -webkit-box-shadow: 0 5px 3px 3px #ccc
+  box-shadow: 0 5px 3px 3px #ccc
+
+
+.recipe p
+  color: blue
+  padding: 8px 0 4px
+
+
+.recipe.ng-enter
+  -webkit-transition: .5s ease-in-out all
+  transition: .5s ease-in-out all
+  opacity: 0
+
+.recipe.ng-enter-active
+  opacity: 1
+
+
+.recipe:nth-child(4n)
+  margin-right: 0
+
+
+.recipe-image
+  height: 200px
+  width: 100%
+
+
+.recipe-link
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+
+@media only screen and (max-width: 850px) 
+  .recipe
+    margin-right: 3%
+    width: 48.5%
+  
+
+  .recipe:nth-child(2n)
+    margin-right: 0
+  
+
+  .recipe-image
+    height: 250px
+  
+
+
+@media only screen and (max-width: 500px) 
+  .recipe
+    width: 100%
+  
+
+  .recipe-image
+    height: initial
+  
+
